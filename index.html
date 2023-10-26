@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mehrwertsteuerrechner</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Mehrwertsteuerrechner</h1>
+    </header>
+    <main>
+      <section>
+        <!-- Berechnung -->
+        <article>
+          <form onsubmit="return false">
+            <div class="container">
+              <h3>Was soll berechnet werden?</h3>
+              <div>
+                <input type="radio" name="taxChoice" id="addTax" checked />
+                <label for="addTax"
+                  >Mehrwertsteuerrechner aufschlagen (Netto zu Brutto)</label
+                >
+              </div>
+              <div>
+                <input type="radio" name="taxChoice" id="subTax" />
+                <label for="subTax"
+                  >Mehrwertsteuerrechner abziehen (Brutto zu Netto)</label
+                >
+              </div>
+            </div>
+
+            <div class="container">
+              <h3>Mehrwertsteuersatz</h3>
+              <div>
+                <input type="radio" name="taxValue" id="tax19" checked />
+                <label for="tax19">19%</label>
+              </div>
+
+              <div>
+                <input type="radio" name="taxValue" id="tax7" />
+                <label for="tax7">7%</label>
+              </div>
+            </div>
+
+            <div class="container">
+              <p id="inputAmountLabel">
+                Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<span>*</span>
+              </p>
+              <input
+                type="number"
+                name=""
+                step="0.01"
+                min="0.01"
+                id="inputAmount"
+                required
+              />
+            </div>
+            <input type="submit" value="Berechnen" id="submit" class="btn" />
+          </form>
+        </article>
+
+        <!-- Ergebnis -->
+        <article>
+          <h2>Ergebnis</h2>
+          <div class="container">
+            <h3>Mehrwertsteuerbetrag</h3>
+            <p id="resultTaxOutput">€</p>
+          </div>
+          <div class="container">
+            <h3 id="resultTotalLabel">Bruttobetrag (Endpreis)</h3>
+            <p id="resultTotalOutput">€</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
