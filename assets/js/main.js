@@ -11,23 +11,9 @@ const resultTaxOutput = document.body.querySelector("#resultTaxOutput");
 const resultTotalLabel = document.body.querySelector("#resultTotalLabel");
 const resultTotalOutput = document.body.querySelector("#resultTotalOutput");
 
-// Berechnung 19% MwSt:
-// let calcGross19 = inputAmount.value * 1.19;
-// let calcNet19 = inputAmount.value / 1.19;
-// let calcNetPlus19 = inputAmount.value * 0.19;
-// let calcGrossMinus19 = inputAmount.value / 119 * 19;
-
-// Berechnung 7% MwSt:
-// let calcGross7 = inputAmount.value * 1.07;
-// let calcNet7 = inputAmount.value / 1.07;
-// let calcNetPlus7 = inputAmount.value * 0.07;
-// let calcGrossMinus7 = inputAmount.value / 107 * 7;
-
-
-
 const grossNetChangeText = () => {
     if (subTax.checked === true && addTax.checked === false) {
-            inputAmountLabel.innerHTML = "Bruttobetrag (Preis inkl. Mehrwertsteuer) in Euro<span class='red'>*</span>"; //DAS HIER MUSS SCHON VOR BUTTON KLICK PASSIEREN!!!!
+            inputAmountLabel.innerHTML = "Bruttobetrag (Preis inkl. Mehrwertsteuer) in Euro<span class='red'>*</span>";
     }   else if (subTax.checked === false && addTax.checked === true) {
             inputAmountLabel.innerHTML = "Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<span class='red'>*</span>";
     }

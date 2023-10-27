@@ -13,12 +13,20 @@ body {
 h1 {
     width: 600px;
     margin: 0 auto;
+    padding-left: 10px;
+    padding-bottom: 5px;
 }
 
 h2, 
 h3 {
     line-height: 2;
 }
+
+/* Header */
+header {
+    margin-top: 5vh;
+}
+
 
 /* Berechnung */
 main section {
